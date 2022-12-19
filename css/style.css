@@ -1,0 +1,656 @@
+/* ========================= google font-family link ========================= */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;1,400&family=Roboto:ital,wght@0,100;0,400;1,300&display=swap");
+/* ========================= common css ========================= */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+section {
+    padding: 80px 0px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: 1px solid rgb(221, 221, 221);
+    background: rgb(255, 255, 255);
+}
+/* ========================= Navbar css ========================= */
+
+.navbar-item {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    transition: all 0.3s ease 0s;
+}
+
+.navbar-item.sticky {
+    background: rgb(32, 40, 53);
+    padding: 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 5px 0px;
+}
+
+.navbar-item .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 80px;
+}
+
+.navbar-item .navbar-menu {
+    display: inline-flex;
+}
+
+ul.navbar-menu.list-unstyled {
+    padding-top: 15px;
+}
+
+.navbar-menu li {
+    list-style: none;
+}
+
+.navbar-menu li a {
+    color: rgb(255, 255, 255);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    margin-left: 40px;
+    text-decoration: none;
+    transition: all 0.5s ease 0s;
+}
+
+.navbar-menu li a:hover {
+    color: rgb(252, 91, 98);
+}
+
+.icon {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar-menu .cancel-btn {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+
+@media (max-width: 992px) {
+    body.disabled {
+        overflow: hidden;
+    }
+
+    .icon {
+        display: block;
+    }
+
+    .icon.hide {
+        display: none;
+    }
+
+    .navbar-item .navbar-menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        max-width: 400px;
+        left: -100%;
+        top: 0px;
+        display: block;
+        padding: 40px 0px;
+        text-align: center;
+        background: rgb(32, 40, 53);
+        transition: all 0.3s ease 0s;
+    }
+
+    .navbar-item.show .navbar-menu {
+        left: 0%;
+    }
+
+    .navbar-item .navbar-menu li {
+        margin-top: 45px;
+    }
+
+    .navbar-item .navbar-menu li a {
+        font-size: 23px;
+        margin-left: -100%;
+        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+    }
+
+    .navbar-item.show .navbar-menu li a {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 380px) {
+    .navbar .logo a {
+        font-size: 27px;
+    }
+}
+/* ========================= Hero area css ========================= */
+
+#hero {
+    background: linear-gradient(#00000070, #00000073), url(../image/Resturant-02.jpg);
+    z-index: 1;
+    padding: 250px 0;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    color: rgb(0, 161, 73);
+    font-weight: 500;
+}
+
+.hero-content p {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.hero-content button {
+    background: #fb4e2a;
+    border: none;
+    color: #fff;
+}
+
+.hero-bg {
+    position: relative;
+}
+
+/* ========================= menus area css ========================= */
+
+#menus {
+    background: rgb(255, 255, 255);
+    padding: 80px 0px;
+}
+
+.menu-item {
+    margin-top: -110px;
+    padding-bottom: 57px;
+}
+
+.menu-item h2 {
+    background: rgb(238, 172, 0);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    display: inline-block;
+    margin: 0px auto;
+    padding: 6px 23px;
+    border-radius: 5px;
+}
+
+#menu a {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 40px;
+    margin: 0px 5px 5px 0px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 50px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+
+#menu a:hover {
+    background-color: rgb(255, 194, 34);
+}
+
+.item {
+    text-align: center;
+}
+
+.item img {
+    width: 100%;
+    display: inline-block;
+    margin: 10px;
+}
+
+.img {
+    height: 500px;
+}
+
+/* ========================= Categories menus area ========================= */
+
+  #menus {
+    background: rgb(255, 255, 255);
+    padding: 50px 0px;
+}
+
+.chefs,
+.categories-content {
+    width: 100%;
+    padding: 13px 100px;
+    overflow: hidden;
+}
+
+.categories-content {
+    padding: 13px 0;
+}
+
+.chefs h3,
+.categories-content h3 {
+    font-size: 17px;
+    font-weight: 600;
+    float: left;
+
+}
+
+.chefs a,
+.categories-content a {
+    float: right;
+    font-size: 14px;
+    color: #f2994a;
+    font-weight: 600px;
+}
+
+.menu-item h2 {
+    background: #fff;
+    box-shadow: inset 2px 2px 2px 0px rgb(255 255 255 / 50%), 7px 7px 20px 0px rgb(0 0 0 / 10%), 4px 4px 5px 0px rgb(0 0 0 / 10%);
+    color: #000;
+    text-align: center;
+    display: inline-block;
+    margin: 0px auto;
+    padding: 6px 23px;
+    border-radius: 5px;
+}
+
+.searchform {
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 85px;
+    left: 0;
+}
+
+#search {
+    box-shadow: inset 2px 2px 2px 0px rgb(255 255 255 / 50%), 7px 7px 20px 0px rgb(0 0 0 / 10%), 4px 4px 5px 0px rgb(0 0 0 / 10%);
+    width: 500px;
+    border-radius: 50px;
+    border: none;
+    margin-bottom: 29px;
+    padding: 15px 30px 15px 52px;
+    border-radius: 50px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 20px;
+    top: 16px;
+    font-size: 22px;
+}
+
+#search:focus {
+    outline: none;
+}
+
+.categories ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    margin: 0;
+    padding: 20px 19px 20px 11px;
+}
+
+.categories ul::-webkit-scrollbar {
+    display: none;
+}
+
+.categories ul li {
+    white-space: nowrap;
+    margin: 0px 5px;
+    background: #fff;
+    padding: 9px 19px;
+    box-shadow: inset 2px 2px 2px 0px rgb(255 255 255 / 50%), 7px 7px 20px 0px rgb(0 0 0 / 10%), 4px 4px 5px 0px rgb(0 0 0 / 10%);
+    border-radius: 50px;
+}
+
+.categories ul li a {
+    color: #000;
+    font-size: 16px;
+}
+
+
+@media screen and (max-width:575px) {
+
+    .chefs,
+    .categories-content {
+        padding: 13px 10px;
+    }
+
+    .categories-content {
+        padding: 13px 10px;
+    }
+}
+
+/* ========================= Food Item area area ========================= */
+  section#food-item {
+    padding-bottom: 0px;
+}
+
+.food-item {
+    padding: 0px 100px;
+}
+
+.food-item-box {
+    border: 1px solid #ddd;
+    border-radius: 10px 10px 10px 10px;
+    margin-bottom: 30px;
+}
+.social ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social ul li {
+    display: inline-block;
+}
+.food-item-content {
+    padding: 0 20px 20px 20px;
+}
+
+.food-item-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 14px;
+}
+
+.food-item-box h3 {
+    margin-top: 10px;
+}
+
+.food-item-box p {
+    font-size: 15px;
+    line-height: 1.8rem;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1399px) {
+    .food-item {
+        padding: 0px 0px;
+    }
+}
+
+.view-menu {
+    background: #fb4e2a;
+    color: #fff;
+    border: none;
+    transition: 0.5s;
+}
+.view-menu:hover{
+    background: #000;
+}
+.see-more {
+    background: #fb4e2a;
+    color: #fff;
+}
+
+
+/* ========================= Popular dishes css ========================= */
+
+.product-menu {
+    padding: 25px 0px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 14px 9px 10px 0px;
+}
+
+.product-item p {
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+}
+
+.product-item span {
+    font-size: 18px;
+    color: rgb(255, 194, 34);
+    font-weight: bold;
+}
+
+.see-more button {
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: 1px solid rgb(221, 221, 221);
+    background: transparent;
+}
+
+.bg-light {
+    background-color: rgb(255, 255, 255) !important;
+}
+
+/* ========================= Discount css ========================= */
+
+section#discount {
+    padding: 0px;
+}
+
+#discount {
+    background: url("../image/discount-bg.jpg") center center / cover no-repeat;
+}
+
+.discount-product {
+    position: relative;
+}
+
+#offer {
+    position: absolute;
+    top: 77px;
+    left: 525px;
+}
+
+.discount-content {
+    position: absolute;
+    top: 103px;
+    left: 565px;
+}
+
+.offer {
+    color: rgb(255, 255, 255);
+    transform: translate(25px, 300px);
+}
+
+.offer h1 {
+    font-size: 72px;
+}
+/* ========================= Top recipes css ========================= */
+
+.resipes-content {
+    position: relative;
+}
+
+.resipes-content h2 {
+    display: inline-block;
+}
+
+.resipes-content button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: none;
+    text-decoration: underline;
+}
+
+.recipes-item {
+    overflow: hidden;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 13px 4px;
+}
+
+.recipes-img {
+    float: left;
+}
+
+.recipes-img img {
+    width: 136px;
+}
+
+.recipes-content {
+    transform: translate(5px, 24px);
+}
+
+.recipes {
+    background: rgb(255, 194, 34);
+    text-align: center;
+    padding: 50px 0px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.recipes img {
+    width: 276px;
+}
+
+/* ========================= Testimonial css ========================= */
+
+#testimonial {
+    background: rgb(247, 242, 226);
+}
+
+.items {
+    width: 94%;
+    height: 400px;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 5px;
+    transition: all 0.5s ease 0s;
+}
+
+.items img {
+    max-width: 26%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 17px 13px 9px;
+}
+
+.image {
+    max-width: 100px;
+    height: 90px;
+}
+
+.items p {
+    font-size: 1.1rem;
+}
+
+.rating-icon {
+    color: rgb(255, 190, 0);
+}
+/* ========================= Blog css ========================= */
+
+.blog-box {
+    box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 30px;
+    border-radius: 5px;
+}
+
+.blog-content {
+    padding: 27px;
+}
+
+.blog-box img {
+    width: 100%;
+    height: 300px;
+}
+/* ========================= Footer css ========================= */
+
+#footer {
+    background: rgb(24, 26, 30);
+    padding: 100px 0px 0px;
+}
+
+.fa-facebook-f {
+    font-size: 1.5rem;
+    padding: 7px 13px;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+.fa-facebook-f {
+    background: rgb(59, 89, 152);
+}
+
+.fa-instagram {
+    background: rgb(188, 42, 141);
+}
+
+.fa-twitter {
+    background: rgb(0, 172, 237);
+}
+
+.fa-instagram,
+.fa-twitter {
+    font-size: 1.5rem;
+    padding: 8px 10px;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+.footer-content ul li a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8rem;
+}
+
+input#email {
+    padding: 10px 30px;
+    border-radius: 50px;
+}
+
+#iconbtn {
+    padding: 12px 40px;
+    background: rgb(244, 47, 44);
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    border: 0px;
+    margin-left: -82px;
+    transition: all 0.5s ease 0s;
+}
+
+#iconbtn:hover {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.copyright-message {
+    background: rgb(0, 0, 0);
+    padding: 15px 0px;
+    margin-top: 20px;
+}
+
+.copyright-message span {
+    font-size: 16px;
+}
+
+
